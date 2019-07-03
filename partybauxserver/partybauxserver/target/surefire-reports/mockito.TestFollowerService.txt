@@ -1,0 +1,19 @@
+-------------------------------------------------------------------------------
+Test set: mockito.TestFollowerService
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.002 s <<< FAILURE! - in mockito.TestFollowerService
+getAllFollowersServiceTest(mockito.TestFollowerService)  Time elapsed: 0.002 s  <<< ERROR!
+org.mockito.exceptions.misusing.UnfinishedVerificationException: 
+
+Missing method call for verify(mock) here:
+-> at com.example.partybauxserver.client.ClientService.removeClientService(ClientService.java:14)
+
+Example of correct verification:
+    verify(mock).doSomething()
+
+Also, this error might show up because you verify either of: final/private/equals()/hashCode() methods.
+Those methods *cannot* be stubbed/verified.
+Mocking methods declared on non-public parent classes is not supported.
+
+	at mockito.TestFollowerService.init(TestFollowerService.java:34)
+
